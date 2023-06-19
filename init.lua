@@ -175,6 +175,13 @@ local config = {
 			--     },
 			--   },
 			-- },
+			gopls = {
+				settings = {
+					gopls = {
+						buildFlags = { "-tags=integration" },
+					},
+				},
+			},
 		},
 	},
 
@@ -225,6 +232,9 @@ local config = {
 			--     require("lsp_signature").setup()
 			--   end,
 			-- },
+			{ "mfussenegger/nvim-dap" },
+			{ "leoluz/nvim-dap-go" },
+			{ "rcarriga/nvim-dap-ui" },
 		},
 		-- All other entries override the require("<key>").setup({...}) call for default plugins
 		["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
